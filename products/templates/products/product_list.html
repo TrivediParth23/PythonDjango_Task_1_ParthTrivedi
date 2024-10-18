@@ -1,0 +1,21 @@
+<form method="GET">
+    <label for="min_price">Min Price:</label>
+    <input type="number" name="min_price" step="0.01">
+    
+    <label for="max_price">Max Price:</label>
+    <input type="number" name="max_price" step="0.01">
+    
+    <label for="min_size">Min Size:</label>
+    <input type="number" name="min_size" step="0.01">
+    
+    <label for="max_size">Max Size:</label>
+    <input type="number" name="max_size" step="0.01">
+    
+    <button type="submit">Filter</button>
+</form>
+
+<ul>
+{% for product in products %}
+    <li>{{ product.name }} - Price: {{ product.price }} - Size: {{ product.size }}</li>
+{% endfor %}
+</ul>
